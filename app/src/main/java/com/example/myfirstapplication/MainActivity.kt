@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val btn=findViewById<Button>(R.id.button)
         val textview=findViewById<TextView>(R.id.textView2)
         val btn2=findViewById<Button>(R.id.button2)
+
         btn2.setOnClickListener()
         {
             val intent=Intent(Intent.ACTION_VIEW, Uri.parse("https://www.fbise.com"))
@@ -31,6 +33,12 @@ class MainActivity : AppCompatActivity() {
              Intent.putExtra("name",data)
             startActivity(Intent)
         }
+
+  fun gettingdata()
+ {
+     Toast.makeText(this, "Hyee", Toast.LENGTH_SHORT).show()
+
+ }
 
 
     }
